@@ -2,13 +2,15 @@
 <html>
 <body>
 
+<p id="demo">this is great</p>
+
 <script>
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ajax_info.txt", true);
+  xhr.open("GET", "ajax_info.txt", true);
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       // innerText does not let the attacker inject HTML elements.
-      document.getElementById("demo").innerText = "Hello";
+      document.getElementById("demo").innerText = xhr.responseText;
     }
   }
   xhr.send();
