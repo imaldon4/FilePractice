@@ -1,39 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Ike Maldonado">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Practice</title>
-
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-
-
-  <body>
-
-    <div id="demo">
-    <h2>The XMLHttpRequest Object</h2>
-    <button type="button" onclick="loadDoc()">Change Content</button>
-    </div>
+<html>
+<body>
 
 
 
-  </body>
-
-  <script>
-  function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("demo").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "ajax_info.txt", true);
-    xhttp.send();
-  }
-  </script>
+</body>
 </html>
