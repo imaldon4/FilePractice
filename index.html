@@ -35,7 +35,14 @@ function myFunction(xhttp){
 <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $("#heading").load("ajax_info.txt");
+      $("#heading").load("ajax_info.txt", function(responseTxt, statusTxt, xhr){
+        if (statusTxt == 'success') {
+          alert("External content loaded successfully!");
+        }
+        if (statusTxt == 'error') {
+          alert('Error: ' + xhr.status + ': ' + xhr.statusText);
+        }
+      });
     });
   });
 </script>
