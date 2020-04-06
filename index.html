@@ -15,7 +15,7 @@
   <p>Click the button several times to see if the time changes, or if the file is cached.</p>
 
 
-<script>
+<!-- <script>
 function loadDoc(url, cFunction){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function(){
@@ -30,11 +30,13 @@ function loadDoc(url, cFunction){
 function myFunction(xhttp){
   document.getElementById('heading').innerHTML = xhttp.responseText;
 }
-</script>
+</script> -->
 
 <script>
   $(document).ready(function(){
-
+    $("button").click(function(){
+      $("p").hide();
+    });
   });
 </script>
 
