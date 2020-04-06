@@ -5,21 +5,25 @@
   <h1 id="heading">This is a heading!</h1>
   <h2>The XMLHttpRequest Object</h2>
 
-  <button type="button" onclick="loadDoc()">Request data</button>
+  <button type="button" onclick="loadDoc('ajax_info.txt?t=', myFunction)">Request data</button>
 
   <p>Click the button several times to see if the time changes, or if the file is cached.</p>
 
 
 <script>
-function loadDoc(){
+function loadDoc(url, cFunction){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function(){
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById('heading').innerHTML = this.responseText;
+      cFunction(this);
     }
-  }
-  xhttp.open('GET', 'ajax_info.txt?t=', true);
+  };
+  xhttp.open('GET', url, true);
   xhttp.send();
+}
+
+function myFunction(xhttp){
+  document.getElementById('heading').innerHTML = xhttp.responseText;
 }
 
 
