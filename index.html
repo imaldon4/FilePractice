@@ -35,8 +35,7 @@ function myFunction(xhttp){
 <script>
   $(document).ready(function(){
     $("button").click(function(){
-      $(this).hide();
-      $("#heading").text("Changed!");
+      $("#heading").load("ajax_info.txt");
     });
   });
 </script>
