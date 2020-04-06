@@ -32,7 +32,7 @@ function myFunction(xhttp){
 }
 </script> -->
 
-<script>
+<!-- <script>
   $(document).ready(function(){
     $("button").click(function(){
       $("#heading").load("ajax_info.txt", function(responseTxt, statusTxt, xhr){
@@ -45,6 +45,14 @@ function myFunction(xhttp){
       });
     });
   });
+</script> -->
+
+<script>
+  $(function(){
+    $("button").click(function(){
+      $("#heading").load("ajax_info.txt");
+    })
+  })
 </script>
 
 </body>
